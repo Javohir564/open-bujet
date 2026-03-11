@@ -1,7 +1,7 @@
 import asyncio
 import logging
 import aiosqlite
-from aiogram import Bot, Dispatcher, F
+from aiogram import Bot, Dispatcher, F, types
 from aiogram.types import (
     Message, CallbackQuery,
     InlineKeyboardMarkup, InlineKeyboardButton,
@@ -17,7 +17,7 @@ from config import BOT_TOKEN, ADMIN_ID, ADMIN_LOGIN, ADMIN_PASSWORD, ADMIN_USERN
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-bot = Bot(token=BOT_TOKEN)
+bot = Bot(token=BOT_TOKEN, parse_mode="HTML")
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 
@@ -506,7 +506,6 @@ async def main():
     await db_init()
     logger.info("Bot ishga tushdi...")
     await dp.start_polling(bot)
-
 
 if __name__ == "__main__":
     asyncio.run(main())
