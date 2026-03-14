@@ -103,7 +103,7 @@ async def ad_loop(chat_id: int):
         "✅SIZ HAM O'Z HISSANGIZNI QO'SHING VA DAROMAD OLING.\n\n"
         "✅TOLOVLAR SAYTDAN TELEFON RAQAMINGIZ KO'RINISHI BILAN 24 SOAT ICHIDA AMALGA OSHIRILADI!!!!!\n\n"
         f"👉🏻Imkoniyatni qoʻldan boy bermang👇🏻\n"
-        f"https://t.me/BEKSHOHBUJET_bot"
+        f"@openbujet01_bot"
     )
     while True:
         try:
